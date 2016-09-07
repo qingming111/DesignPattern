@@ -50,6 +50,18 @@ public:
 		Addoperation();
 	}
 	void Addoperation()
-	{ cout << "add " << endl;}
+	{ cout << "add a" << endl;}
 };
 
+class DecoratorB : public Decorator
+{
+public:
+	DecoratorB(Product *p) : Decorator(p) {}
+	void operation()
+	{
+		Decorator::operation();
+		Addoperation();
+	}
+	void Addoperation()
+	{ cout << "add b" << endl;}
+};
